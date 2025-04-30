@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyansh Bhandari - Portfolio</title>
+    <style>
+   :root {
+    --primary-color: #1abc9c;        /* Teal for accents */
+    --secondary-color: #2c3e50;      /* Deep blue-gray */
+    --accent-color: #c49b66;         /* Soft gold */
+    --text-color: #f0f0f0;           /* Light gray for readability */
+    --light-bg: #1e1e1e;             /* Very dark gray */
+
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #000000, #2c3e50);
+    color: var(--text-color);
+}
+
+nav {
+    background-color: #000000;
+}
+
+nav ul li a {
+    color: var(--text-color);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    background-color: #2b2b2b;
+    color: var(--text-color);
+    box-shadow: var(--shadow);
+}
+
+h1, h2, h3 {
+    color: var(--accent-color);
+}
+
+.highlight-name {
+    color: #f1c40f; /* Bright yellow for name */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn:hover {
+    background-color: #159c88;
+}
+
+.project-card,
+.achievement-card,
+.skill-category {
+    background-color: #333333;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: #111111;
+    color: var(--text-color);
+}
+
+.social-links a {
+    color: var(--text-color);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+    
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+    
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            margin: 0 auto 20px;
+            object-fit: cover;
+            background-color: var(--light-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: var(--secondary-color);
+        }
+    
+        nav {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+    
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo {
+            background-color: var(--white);
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+    
+        nav ul li {
+            margin: 0 15px;
+        }
+    
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+    
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+    
+        .highlight-name {
+            color: #e2e2e2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+    
+        section {
+            padding: 60px 0;
+            background-color: var(--white);
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+    
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+    
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+        }
+    
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+    
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+    
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+    
+        p {
+            margin-bottom: 15px;
+        }
+    
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+    
+        .contact-info {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        .contact-item {
+            margin-right: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .contact-item i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+    
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .btn:hover {
+            background-color: #87a3c2;
+        }
+    
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+        }
+    
+        .skill-category h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    
+        .skill-item {
+            margin-bottom: 15px;
+        }
+    
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+    
+        .skill-bar {
+            height: 10px;
+            background-color: #dcdcdc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+    
+        .skill-progress {
+            height: 100%;
+            background-color: var(--accent-color);
+        }
+    
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .project-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+    
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+    
+        .project-img {
+            height: 200px;
+            background-color: #d9e2ec;
+            overflow: hidden;
+        }
+    
+        .project-info {
+            padding: 20px;
+        }
+    
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+    
+        .project-tag {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    
+        .achievements-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+    
+        .achievement-card {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    
+        .achievement-icon {
+            font-size: 36px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+    
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+    
+        .social-links {
+            margin: 20px 0;
+        }
+    
+        .social-links a {
+            color: var(--white);
+            font-size: 22px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+    
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+    
+        @media (max-width: 768px) {
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+    
+            .skills-container, .projects-container, .achievements-container {
+                grid-template-columns: 1fr;
+            }
+    
+            h1 {
+                font-size: 2rem;
+            }
+    
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">PB</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <img src="1714596410028.jpeg" alt="Priyansh Bhandari" class="profile-img">
+            <h1 class="highlight-name">Priyansh Bhandari</h1>
+            <p>Bachelor of Computer Application Student | Web Developer</p>
+            <div class="contact-info" style="display: flex; justify-content: center; margin-top: 20px;">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>priyanshb717@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91-8279796420</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <a href="https://linkedin.com/in/priyansh-bhandari1029/" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/PriyanshBhandari" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="General CV Priyansh.pdf" class="btn" download="Priyansh_Bhandari_CV.pdf" target="_blank">
+                    <i class="fas fa-download"></i> Download CV
+                  </a>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Priyansh Bhandari, a Bachelor of Computer Application student at Lovely Professional University with a passion for web development and programming. I focus on creating intuitive and responsive web applications using modern technologies.</p>
+                    <p>I'm constantly learning and improving my skills in different programming languages and web technologies. My goal is to become a proficient full-stack developer and create impactful digital solutions.</p>
+                    <p>I value adaptability and innovation in my approach to problem-solving and project development.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C++</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML5</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>CSS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Database & Tools</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MySQL</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Adaptability</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Innovation</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Leadership</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images.jpeg" alt="Climate Changes Web Application" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Climate Changes Web Application</h3>
+                        <p>An application to show the prevention of different climate changes. Created using HTML and CSS.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="download.jpeg" alt="Coffee Shop Website" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Coffee Shop Website</h3>
+                        <p>Created a responsive web page to display the menu and dishes for a coffee shop. Utilized HTML and CSS to build a clean and visually appealing website.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images (1).jpeg" alt="Matrimonial Website" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="project-info">
+                        <h3>Matrimonial Website</h3>
+                        <p>Developed the frontend interface of a Matrimonial Website to demonstrate practical knowledge of HTML, CSS, and JavaScript. Focused on clean design and responsive layout.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <h3>Team Lead | Full Stack Developer</h3>
+                <p style="color: var(--accent-color); font-weight: 600;">October 2024</p>
+                <ul style="list-style-type: disc; margin-left: 20px; margin-top: 15px;">
+                    <li>Collaborated with cross-functional teams to successfully launch a website revamp, optimizing UI/UX design and implementing SEO strategies, resulting in an increase in organic traffic and improvement in user satisfaction.</li>
+                    <li>Led strategic initiatives for frontend optimization with HTML, JavaScript, PHP, achieving faster page load time, integrating CSS for a boost in user experience through dark mode functionality.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <h3>Bachelor of Computer Application</h3>
+                <p style="color: var(--accent-color); font-weight: 600;">Lovely Professional University, Punjab</p>
+                <p>August 2023 - Present</p>
+                <p>CGPA: 7.0</p>
+            </div>
+            
+            <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <h3>Intermediate</h3>
+                <p style="color: var(--accent-color); font-weight: 600;">Shri Govardhan Saraswati Vidya Mandir, Dehradun</p>
+                <p>April 2022 - March 2023</p>
+                <p>Percentage: 84.6%</p>
+            </div>
+            
+            <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px;">
+                <h3>Matriculation</h3>
+                <p style="color: var(--accent-color); font-weight: 600;">Saraswati Vidya Mandir Inter College, Srinagar</p>
+                <p>April 2020 - March 2021</p>
+                <p>Percentage: 74.7%</p>
+            </div>
+        </section>
+        
+        <section id="certifications">
+            <h2>Certifications & Courses</h2>
+            <div style="background-color: var(--light-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px;">
+                <h3>C and C++ Programming</h3>
+                <p style="color: var(--accent-color); font-weight: 600;">Infosys Springboard</p>
+                <p>April 2024 - March 2024</p>
+            </div>
+        </section>
+        
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Team Lead Position</h3>
+                    <p>Led cross-functional teams in website revamp project with focus on UI/UX optimization.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>C/C++ Programming Certification</h3>
+                    <p>Successfully completed certification program from Infosys Springboard.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                
+                <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
+                    <div style="margin: 15px 30px; text-align: center;">
+                        <i class="fas fa-envelope" style="font-size: 30px; color: var(--accent-color); margin-bottom: 10px;"></i>
+                        <p style="font-weight: 600;">Email</p>
+                        <p>priyanshb717@gmail.com</p>
+                    </div>
+                    
+                    <div style="margin: 15px 30px; text-align: center;">
+                        <i class="fas fa-phone" style="font-size: 30px; color: var(--accent-color); margin-bottom: 10px;"></i>
+                        <p style="font-weight: 600;">Phone</p>
+                        <p>+91-8279796420</p>
+                    </div>
+                    
+                    <div style="margin: 15px 30px; text-align: center;">
+                        <i class="fas fa-map-marker-alt" style="font-size: 30px; color: var(--accent-color); margin-bottom: 10px;"></i>
+                        <p style="font-weight: 600;">Location</p>
+                        <p>Punjab, India</p>
+                    </div>
+                </div>
+                
+                <div class="social-links" style="margin-top: 30px;">
+                    <a href="https://linkedin.com/in/priyansh-bhandari1029/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/PriyanshBhandari" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Priyansh Bhandari. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
